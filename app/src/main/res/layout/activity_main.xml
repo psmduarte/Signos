@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C4D3DF"
-    tools:context="signos.cursoandroid.com.signos.MainActivity">
+    tools:context="signos.cursoandroid.com.signos.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="31dp"
         android:layout_marginTop="29dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
@@ -21,33 +22,28 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="130dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="29dp"
         android:text="Introduza a sua data de nascimento:"
         android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textDataN"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Space
         android:id="@+id/space"
         android:layout_width="5dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="68dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnSignosId" />
 
     <Button
         android:id="@+id/btnId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="14dp"
         android:text="Data de Nascimento"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -56,31 +52,44 @@
         android:id="@+id/textDataN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="22dp"
+        android:layout_marginTop="20dp"
         android:text="Data de Nascimento"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/textIdade"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnId" />
 
     <TextView
         android:id="@+id/textIdade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="18dp"
         android:text="Idade"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/space"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDataN" />
 
     <Button
         android:id="@+id/btnSignosId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:text="Consultar Signos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="SIGNO"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignosId"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="433dp" />
+        app:layout_constraintRight_toRightOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,6 +1,7 @@
 package signos.cursoandroid.com.signos;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +14,7 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button botao;
+    private Button botao, btnSignos;
     private TextView textDataN, textIdade;
 
     @Override
@@ -21,9 +22,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        btnSignos = findViewById(R.id.btnSignosId);
         textDataN = findViewById(R.id.textDataN);
         textIdade = findViewById(R.id.textIdade);
         botao = findViewById(R.id.btnId);
+
+
+        btnSignos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,SignosActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         botao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
