@@ -31,5 +31,7 @@ public class PerfilSigno extends AppCompatActivity {
 
         texto.setText(perfis[id]);
 
+
+
     }
 }

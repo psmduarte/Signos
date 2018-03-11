@@ -14,7 +14,7 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button botao, btnSignos;
+    private Button botao, btnSignos, botaoprevisoes;
     private TextView textDataN, textIdade, signo;
 
     @Override
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         textIdade = findViewById(R.id.textIdade);
         signo = findViewById(R.id.signoId);
         botao = findViewById(R.id.btnId);
+        botaoprevisoes = findViewById(R.id.btnPrevisoesId);
 
 
         btnSignos.setOnClickListener(new View.OnClickListener() {
@@ -37,18 +38,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         botao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 setData();
+            }
+        });
 
+        botaoprevisoes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Previsao.class);
+                startActivity(intent);
             }
         });
 
     }
-
 
     private void setData() {
 
